@@ -241,7 +241,7 @@ a span {
 
 .bg-hiro {
     max-width: 1440px;
-    height: auto;
+    height: 600px;
     margin-left: auto;
     margin-right: auto;
     background-image: var(--rgba-hiro) url(../images/hiro-logo.jpg);
@@ -290,7 +290,7 @@ a span {
 }
 
 .slogans-icon-link {
-    width: auto;
+    width: 100%;
     height: 112px;
     margin-bottom: 8px;
     display: flex;
@@ -463,9 +463,10 @@ a span {
 }
 
 .custom-link {
+    color: var(--border-color);
     width: 100%;
     height: 100%;
-    border: 1px solid var(--border-color);
+    border: 1px solid currentColor;
     border-radius: 4px;
     display: flex;
     align-items: center;
@@ -474,18 +475,16 @@ a span {
 }
 
 .custom-ikon {
-    fill: var(--usual-icon-color);
+    fill: currentColor;
 }
 
 .custom-link:is(:hover, :focus) {
-    border-color: var(--active-accent-color);
+    color: var(--active-accent-color);
 }
 
 
 
-.custom-link:is(:hover, :focus) .custom-ikon {
-    fill: var(--active-accent-color);
-}
+
 
 
 /*--------------------------Custom--------------------------*/
@@ -591,12 +590,13 @@ a span {
 }
 
 a.text {
+    display: block;
     text-decoration: none;
     color: currentColor
 }
 
-.menu-title:hover,
-.menu-title:focus {
+a.text:hover,
+a.text:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 
 }
